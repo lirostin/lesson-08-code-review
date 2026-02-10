@@ -1,0 +1,18 @@
+[project]
+name = "lesson-08-code-review"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas==1.2.4",
+    "scikit-learn==0.24.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy==1.19.1",
+    "pip-audit>=2.9.0",
+    "ruff>=0.15.0",
+    "numpy==1.19.5",
+]
