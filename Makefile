@@ -16,6 +16,13 @@ WINDOWSINSTALLUV:= powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 install_python_macos:
 	brew install python@$(PYTHON_VERSION)
 
+install_python_ubuntu:
+	sudo apt update -y
+	sudo apt install software-properties-common -y
+	sudo add-apt-repository ppa:deadsnakes/ppa -y
+	sudo apt update -y
+	sudo apt install python$(PYTHON_VERSION) -y
+
 delete_env:
 	rm pyproject.toml
 	rm -rf $(VENV)

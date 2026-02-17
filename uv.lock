@@ -268,6 +268,7 @@ name = "lesson-08-code-review"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "numpy" },
     { name = "pandas" },
     { name = "scikit-learn" },
 ]
@@ -283,6 +284,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "numpy", specifier = "==1.19.5" },
     { name = "pandas", specifier = "==1.2.4" },
     { name = "scikit-learn", specifier = "==0.24.1" },
 ]
