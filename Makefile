@@ -67,11 +67,3 @@ lint:
 	uv run ruff format *.py
 	uv run ruff check *.py --fix --show-fixes
 	uv run mypy *.py
-
-activate_hooks:
-	$(ACTIVATE_MAC); pre-commit install 
-
-pre-commit:
-	pre-commit clean
-	pre-commit install --install-hooks
-	pre-commit run --all-files

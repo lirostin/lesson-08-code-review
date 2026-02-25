@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # Загрузка и обработка данных
     raw_data = load_data(get_csv_path())
     processed_data = add_time_features(raw_data)
-    clear_data = clean_data(raw_data)
+    clear_data = clean_data(processed_data)
     X_train, X_test, y_train, y_test = split_data(clear_data)
 
     # Обучение модели
