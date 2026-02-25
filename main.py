@@ -1,5 +1,5 @@
 from src.data import load_data, split_data
-from src.features import add_time_features
+from src.features import add_time_features, clean_data
 from src.model import TaxiFareModel
 import argparse
 
@@ -19,7 +19,8 @@ if __name__ == "__main__":
     # Загрузка и обработка данных
     raw_data = load_data(get_csv_path())
     processed_data = add_time_features(raw_data)
-    X_train, X_test, y_train, y_test = split_data(processed_data)
+    clear_data = clean_data(raw_data)
+    X_train, X_test, y_train, y_test = split_data(clear_data)
 
     # Обучение модели
     model = TaxiFareModel()

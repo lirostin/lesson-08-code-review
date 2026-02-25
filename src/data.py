@@ -1,7 +1,10 @@
 import pandas as pd
+import os
 from sklearn.model_selection import train_test_split
 
 def load_data(path):
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Файл не найден: {path}")
     return pd.read_csv(path)
 
 def split_data(data, test_size=0.2, random_state=42):
