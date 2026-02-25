@@ -10,3 +10,6 @@ class TaxiFareModel:
 
     def predict(self, X):
         return self.model.predict(X)
+    
+    def score(self, X, y):
+        return self.model.score(X, y)
