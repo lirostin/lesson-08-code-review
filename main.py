@@ -6,7 +6,10 @@ import argparse
 
 def get_csv_path() -> str:
     """
-    Returns the path to the csv file
+    Возращаяет путь к файлу с данными.
+
+    Returns:
+        str: Путь к файлу в виде строки.
     """
 
     parser = argparse.ArgumentParser()
